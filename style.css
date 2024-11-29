@@ -1,0 +1,362 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.screen{
+    display: flex;
+    width: 100%;
+}
+
+.container1{
+    background-color: rgb(20, 20, 20);
+    padding: 15px;
+    padding-right: 0;
+    margin: 10px;
+    height: 80vh;
+    max-width: 500px;
+    min-width: 300px;
+    border-radius: 5px;
+    resize: horizontal;
+    overflow: auto;
+}
+
+.logo{
+    display: flex;
+}
+.logo img{
+    height: 35px;
+}
+.logo h3{
+    color: white;
+    margin: 7px 0  0  8px;
+    font-family: Signika;
+    font-size: 22px;
+}
+.songs{
+    display: block;
+    height: 83%;
+    overflow-y: hidden;
+    
+    &:hover{
+        overflow-y: scroll;
+    }
+}
+.box{
+    background-color: rgb(71, 71, 71);
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px 10px 10px 0;
+
+    &:hover{
+        background-color: rgb(94, 94, 94);
+    }
+}
+.searchbar{
+    display: flex;
+    justify-content: space-between; 
+}
+#box1{
+    border-radius: 30px;
+    padding: 10px;
+    &:hover{
+        background-color: rgb(71, 71, 71);
+    }
+}
+#box2{
+    display: flex;
+    padding: 10px;
+    &:hover{
+        font-weight: bolder;
+    }
+}
+.box1{
+    background-color: rgb(20, 20, 20);
+    border: none;
+    margin: 10px 10px 10px 0;
+    
+}
+.box1 p{
+    padding-top: 4px;
+    margin-right: 4px;
+    color: white;
+}
+
+.container2{
+    background-color: rgb(20, 20, 20);
+    padding: 15px;
+    margin: 10px;
+    margin-left: 0;
+    height: 80vh;
+    flex-grow: 1;
+    border-radius: 5px;
+    overflow-y: scroll;
+    resize: horizontal;
+}
+.container2 h2{
+    color: white;
+    font-size: 40px;
+    padding: 5px;
+    padding-left: 0;
+    margin-bottom: 10px;
+    font-family: Signika;
+}
+.type{
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding-left: 5px;
+    position: fixed;
+    width: 72%;
+    z-index: 1000;
+}
+.select{
+    display: flex;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    padding: 5px;
+    width: 100%;
+    border-radius: 6px;
+    overflow-y: auto;
+
+    &:hover{
+        background-color: rgb(71, 71, 71);
+    }
+
+}
+.select img{
+    height: 50px;
+    border-radius: 4px;
+}
+.name1{
+    color: white;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    font-size: large;
+    font-weight: 400;
+    font-family: Signika;
+}
+.singer{
+    color: white;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    text-align: start;
+    font-size: small;
+    font-weight: 200;
+    font-family: Signika;
+}
+.playsong{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.select1{
+    width: 17vw;
+    text-align: start;
+    display: flex;
+    background-color: rgb(81, 38, 38);
+    border: none;
+    border-radius: 6px;
+    margin: 0 5px 5px 0;
+    
+
+    p{
+        color: white;
+        padding-left: 5px;
+        font-size: 16px;
+        width: 10vw;
+        margin: auto;
+        margin-left:0 ;
+        font-family: Signika;
+    }
+    img{
+        height: 50px;
+        border-radius: 4px;
+    }
+    svg{
+        display: none;
+        color: rgb(29, 185, 84);
+        height: 30px;
+        width: 30px;
+        margin: auto;
+        margin-right: 5px;
+        box-shadow: 5px 5px 5px rgb(20, 20, 20);
+        background-color: black;
+        border-radius: 100%;
+    }
+    &:hover svg{
+        display: inline;
+    }
+}
+.bestsong{
+     background-color: rgb(20, 20, 20);
+     border: none;
+     margin: 0 10px 10px 0;
+     color: white;
+     text-align: start;
+     position: relative;
+     p{
+        padding-top: 2px ;
+        font-size: 20px;
+     }
+    img{
+        height: 150px;
+        border-radius: 6px;
+    }
+    svg{
+        color: rgb(29, 185, 84);
+        background-color: black;
+        border-radius: 100%;
+        height: 50px;
+        width: 50px;
+        margin: auto;
+        box-shadow: 10px black;
+        position: absolute;
+        display: none;
+        bottom: 20%;
+        right: 5%;
+        box-shadow: 5px 5px 10px rgb(15, 15, 15);
+        
+    }
+    &:hover  svg{
+         display: inline;
+         overflow: hidden;
+         animation: animate 0.3s ease 1 forwards ;
+    }
+}
+
+.container3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vw;
+    height: 70px;
+}
+.playone{
+    height: 50px;
+    width: 20vw;
+    margin: auto;
+    margin-left: 10px;
+        display: flex;
+        background-color: rgb(20, 20, 20);
+        border: none;
+        border-radius: 6px;
+        font-family: Signika;
+    
+        &:hover{
+            background-color: rgb(71, 71, 71);
+        }
+    img{
+        height: 50px;
+        border-radius: 4px;
+    }
+    .n{
+        color: white;
+        height: 25px;
+        line-height: 25px;
+        padding-left: 10px;
+        font-size: large;
+        font-weight: 400;
+        font-family: Signika;
+    }
+    .d{
+        color: white;
+        height: 25px;
+        line-height: 25px;
+        padding-left: 10px;
+        text-align: start;
+        font-size: small;
+        font-weight: 200;
+        font-family: Signika;
+    }
+}
+.middle{
+    height: 50px;
+    margin: auto;
+}
+.pause{
+    text-align: center;
+
+    #shuffle{
+        width: 22px;
+        margin: 0 15px 7px 0;
+    }
+    #pre{
+        width: 28px;
+        margin: 0 15px 4px 0;
+    }
+    #masterplay{
+        height: 35px;
+        margin: auto;
+        border-radius: 50%;
+        &:hover{
+            background-color: rgb(29, 185, 84);
+        }
+    }
+    #next{
+        width: 28px;
+        margin: 0 0 4px 15px;
+    }
+    #repeat{
+        width: 22px;
+        margin: 0 0 7px 15px;
+    }
+}
+#bar[type=range] {
+    width: 32vw;
+    height: 5px;
+    background: black;
+    border-radius: 5px;
+    outline: none;
+}
+.end{
+    display: none;
+    margin: auto;
+    margin-right: 15px;
+    img{
+        margin-top: 5px;
+    }
+    input{
+        height: 5px;
+        width: 10vw;
+        margin-bottom: 10px;
+    }
+}
+.time{
+    display: flex;
+
+}
+.tym{
+    color: aliceblue;
+    line-height: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgb(120, 120, 120);
+}
+::-webkit-scrollbar-track{
+    background-color:rgb(43, 43, 43) ;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(134, 134, 134);
+}
+@keyframes animate{
+    0%{
+       transform: translateY(10%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
